@@ -1,5 +1,16 @@
+import { BrowserRouter } from 'react-router-dom'
+
+import { GlobalCss } from './styles'
+import Rotas from './routes'
+
 function App() {
-  return <div>Configurando Ambiente de Trabalho</div>
+  return (
+    <BrowserRouter>
+      <GlobalCss />
+      <div className="container"></div>
+      <Rotas />
+    </BrowserRouter>
+  )
 }
 
 export default App
