@@ -2,7 +2,8 @@ import { createGlobalStyle } from 'styled-components'
 
 export const cores = {
   branca: '#FFF8F2',
-  rosa: '#E66767'
+  rosa: '#E66767',
+  bege: '#FFEBD9'
 }
 
 export const GlobalCss = createGlobalStyle`
@@ -12,6 +13,7 @@ export const GlobalCss = createGlobalStyle`
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
     text-decoration: none;
+    list-style: none;
   }
 
   body {

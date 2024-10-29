@@ -6,7 +6,7 @@ export const Card = styled.div`
 `
 
 export const Infos = styled.div`
-  postion: absolute;
+  position: absolute;
   top: 16px;
   right: 16px;
 `
@@ -15,7 +15,8 @@ export const Tag = styled.div`
   background-color: ${cores.rosa};
   color: ${cores.branca};
   font-size: 12px;
-  padding: 6px 4px;
+  padding: 6px 8px;
+  margin-left: 8px;
   display: inline-block;
 `
 
