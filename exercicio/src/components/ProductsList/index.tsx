@@ -1,4 +1,4 @@
-import Food from '../models/Food'
+import Food from '../../models/Food'
 import Product from '../Product'
 
 import { Container, List } from './styles'

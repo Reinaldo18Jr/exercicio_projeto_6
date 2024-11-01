@@ -45,7 +45,7 @@ const Product = ({
         </div>
       </FlexContainer>
       <Text>{description}</Text>
-      <Button href="#">{more}</Button>
+      <Button to="/perfil">{more}</Button>
     </Border>
   </Card>
 )

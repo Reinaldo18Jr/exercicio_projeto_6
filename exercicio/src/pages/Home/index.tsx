@@ -1,6 +1,6 @@
 import Hero from '../../components/Hero'
 import ProductsList from '../../components/ProductsList'
-import Food from '../../components/models/Food'
+import Food from '../../models/Food'
 
 import star from '../../assets/images/estrela.png'
 import sushi from '../../assets/images/sushi.png'

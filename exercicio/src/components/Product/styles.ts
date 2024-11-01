@@ -1,8 +1,11 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+
 import { cores } from '../../styles'
 
 export const Card = styled.div`
   position: relative;
+  margin-bottom: 48px;
 `
 
 export const Infos = styled.div`
@@ -21,13 +24,19 @@ export const Tag = styled.div`
 `
 
 export const Border = styled.div`
-  border: solid 0px 1px 1px 1px ${cores.rosa};
+  border-left: 1px solid ${cores.rosa};
+  border-bottom: 1px solid ${cores.rosa};
+  border-right: 1px solid ${cores.rosa};
   padding: 8px;
 `
 
 export const FlexContainer = styled.div`
-  diplay: flex;
+  display: flex;
   justify-content: space-between;
+
+  div {
+    display: flex;
+  }
 `
 
 export const NameAndGrade = styled.h2`
@@ -48,7 +57,7 @@ export const Text = styled.p`
   margin: 16px 0;
 `
 
-export const Button = styled.a`
+export const Button = styled(Link)`
   background-color: ${cores.rosa};
   color: ${cores.branca};
   font-size: 14px;

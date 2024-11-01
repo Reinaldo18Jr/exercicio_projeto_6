@@ -18,7 +18,7 @@ export const Links = styled.ul`
   justify-content: center;
 `
 
-export const Link = styled.a`
+export const LinkA = styled.a`
   margin-left: 4px;
   margin-right: 4px;
   cursor: pointer;
