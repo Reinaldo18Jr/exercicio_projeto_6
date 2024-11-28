@@ -37,10 +37,26 @@ export const Cart = styled.a`
 
 export const Apresentacao = styled.div`
   width: 100%;
-  height: 440px;
+  height: 280px;
   display: block;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    content: '';
+  }
 `
 
 export const Country = styled.p`
@@ -53,6 +69,6 @@ export const Country = styled.p`
 export const Name = styled.p`
   font-size: 32px;
   font-weight: bold;
-  padding-top: 320px;
+  padding-top: 152px;
   color: ${cores.branca};
 `
