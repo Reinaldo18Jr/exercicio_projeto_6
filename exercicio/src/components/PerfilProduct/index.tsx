@@ -10,19 +10,6 @@ import {
 
 import pizza from '../../assets/images/pizza.png'
 
-// tentando tipar com a API, esse seria apenas para o Home?
-export type Food = {
-  id: number
-  titulo: string
-  tags: {
-    destacado?: boolean
-    tipo: string
-  }
-  avaliacao: number
-  descricao: string
-  capa: string
-}
-
 const PerfilProduct = () => {
   return (
     <Container>
