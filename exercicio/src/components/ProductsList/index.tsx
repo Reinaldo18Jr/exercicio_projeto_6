@@ -1,4 +1,4 @@
-import { Food } from '../../pages/Home'
+import { Root } from '../../models'
 import Product from '../Product'
 
 import { Container, List } from './styles'
@@ -6,22 +6,15 @@ import { Container, List } from './styles'
 import star from '../../assets/images/estrela.png'
 
 type Props = {
-  foods: Food[]
+  foods: Root[]
 }
 
 const ProductsList = ({ foods }: Props) => {
-  const getFoodTags = (food: Food) => {
-    const tags = []
-
-    if (food.tags.destacado) {
-      tags.push(food.tags.destacado)
+  const getFoodTags = (food: Root) => {
+    return {
+      destacado: food.destacado,
+      tipo: food.tipo
     }
-
-    if (food.tags.tipo) {
-      tags.push(food.tags.tipo)
-    }
-
-    return tags
   }
 
   return (
@@ -37,6 +30,7 @@ const ProductsList = ({ foods }: Props) => {
               description={food.descricao}
               image={food.capa}
               starImg={star}
+              more={food.cardapio}
             />
           ))}
         </List>

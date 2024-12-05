@@ -2,22 +2,10 @@ import { useEffect, useState } from 'react'
 
 import Hero from '../../components/Hero'
 import ProductsList from '../../components/ProductsList'
-
-// tentando tipar com a API, esse seria apenas para o Home?
-export type Food = {
-  id: number
-  titulo: string
-  tags: {
-    destacado?: string[]
-    tipo: string
-  }
-  avaliacao: string
-  descricao: string
-  capa: string
-}
+import { Root } from '../../models'
 
 const Home = () => {
-  const [menu, setMenu] = useState<Food[]>([])
+  const [menu, setMenu] = useState<Root[]>([])
 
   useEffect(() => {
     fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')

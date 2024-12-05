@@ -11,9 +11,12 @@ import {
 } from './styles'
 
 type Props = {
-  infos: string[]
+  infos: {
+    destacado?: boolean
+    tipo: string
+  }
   title: string
-  grade: string
+  grade: number
   description: string
   more: string
   image: string
@@ -28,26 +31,38 @@ const Product = ({
   more,
   image,
   starImg
-}: Props) => (
-  <Card>
-    <img src={image} alt={title} />
-    <Infos>
-      {infos.map((info) => (
-        <Tag key={info}>{info}</Tag>
-      ))}
-    </Infos>
-    <Border>
-      <FlexContainer>
-        <NameAndGrade>{title}</NameAndGrade>
-        <div>
-          <NameAndGrade>{grade}</NameAndGrade>
-          <StarImg src={starImg} alt="star" />
-        </div>
-      </FlexContainer>
-      <Text>{description}</Text>
-      <Button to="/perfil">{more}</Button>
-    </Border>
-  </Card>
-)
+}: Props) => {
+  const showTags = () => {
+    const tags: JSX.Element[] = []
+
+    if (infos.destacado === true) {
+      tags.push(<Tag>{infos.destacado}</Tag>)
+    }
+
+    if (infos.tipo) {
+      tags.push(<Tag>{infos.tipo}</Tag>)
+    }
+
+    return tags
+  }
+
+  return (
+    <Card>
+      <img src={image} alt={title} />
+      <Infos>{showTags()}</Infos>
+      <Border>
+        <FlexContainer>
+          <NameAndGrade>{title}</NameAndGrade>
+          <div>
+            <NameAndGrade>{grade}</NameAndGrade>
+            <StarImg src={starImg} alt="star" />
+          </div>
+        </FlexContainer>
+        <Text>{description}</Text>
+        <Button to="/perfil">{more}</Button>
+      </Border>
+    </Card>
+  )
+}
 
 export default Product
