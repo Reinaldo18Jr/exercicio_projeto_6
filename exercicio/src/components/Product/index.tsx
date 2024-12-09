@@ -18,9 +18,9 @@ type Props = {
   title: string
   grade: number
   description: string
-  more: string
   image: string
   starImg: string
+  id: number
 }
 
 const Product = ({
@@ -28,9 +28,9 @@ const Product = ({
   title,
   grade,
   description,
-  more,
   image,
-  starImg
+  starImg,
+  id
 }: Props) => {
   const showTags = () => {
     const tags: JSX.Element[] = []
@@ -47,7 +47,7 @@ const Product = ({
   }
 
   return (
-    <Card>
+    <Card to={`/perfil/${id}`}>
       <img src={image} alt={title} />
       <Infos>{showTags()}</Infos>
       <Border>
@@ -59,7 +59,7 @@ const Product = ({
           </div>
         </FlexContainer>
         <Text>{description}</Text>
-        <Button to="/perfil">{more}</Button>
+        <Button>Saiba mais</Button>
       </Border>
     </Card>
   )

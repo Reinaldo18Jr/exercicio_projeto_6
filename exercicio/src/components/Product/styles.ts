@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { cores } from '../../styles'
 
-export const Card = styled.div`
+export const Card = styled(Link)`
   position: relative;
   margin-bottom: 48px;
 `
@@ -57,10 +57,9 @@ export const Text = styled.p`
   margin: 16px 0;
 `
 
-export const Button = styled(Link)`
+export const Button = styled.div`
   background-color: ${cores.rosa};
   color: ${cores.branca};
   font-size: 14px;
   padding: 4px 6px;
-  cursor: pointer;
 `
